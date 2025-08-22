@@ -21,6 +21,7 @@ class FrameworkListViewController: UIViewController {
     
     // Combine
     var subscriptions = Set<AnyCancellable>()
+    
     let didSelect = PassthroughSubject<AppleFramework, Never>()
     let items = CurrentValueSubject<[AppleFramework], Never>(AppleFramework.list)
 
