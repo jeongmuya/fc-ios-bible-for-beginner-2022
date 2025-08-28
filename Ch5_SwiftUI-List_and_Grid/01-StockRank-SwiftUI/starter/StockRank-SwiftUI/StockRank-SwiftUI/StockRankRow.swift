@@ -44,11 +44,11 @@ struct StockRankRow: View {
                 .foregroundColor(.gray)
         }
         .padding()
-        .frame(maxWidth: .infinity)
-        .background(.gray)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.black)
     }
 }
 
 #Preview {
-    StockRankRow(stock: StockModel.list[2])
+    StockRankRow(stock: StockModel.list[5])
 }
