@@ -1,6 +1,6 @@
 //
-//  AppleFramework_SwiftUIApp.swift
-//  AppleFramework-SwiftUI
+//  StockRank_SwiftUIApp.swift
+//  StockRank-SwiftUI
 //
 //  Created by joonwon lee on 2022/05/21.
 //
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct AppleFramework_SwiftUIApp: App {
+struct StockRank_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            FrameworkListView()
+            StockRankView()
         }
     }
 }

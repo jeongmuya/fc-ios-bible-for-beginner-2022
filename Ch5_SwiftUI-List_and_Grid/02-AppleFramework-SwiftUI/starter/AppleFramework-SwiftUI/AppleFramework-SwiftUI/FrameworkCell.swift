@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct FrameworkCell: View {
+    
+    var framework: AppleFramework
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(framework.imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            Spacer()
+            Text(framework.name)
+                .font(.system(size: 16, weight: .bold))
+            Spacer()
+        }
     }
 }
 
 #Preview {
-    FrameworkCell()
+    FrameworkCell(framework: AppleFramework.list[0])
+        .frame(width: 160, height: 250)
 }
