@@ -16,6 +16,7 @@
 		9486F0C328386AC20069AEB0 /* StockRank_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486F0C228386AC20069AEB0 /* StockRank_SwiftUIUITests.swift */; };
 		9486F0C528386AC20069AEB0 /* StockRank_SwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486F0C428386AC20069AEB0 /* StockRank_SwiftUIUITestsLaunchTests.swift */; };
 		9486F0D228386AE60069AEB0 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486F0D128386AE60069AEB0 /* StockModel.swift */; };
+		F9CE22E42E6297C8004A0FC8 /* StockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CE22E32E6297C8004A0FC8 /* StockDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		9486F0C228386AC20069AEB0 /* StockRank_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRank_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		9486F0C428386AC20069AEB0 /* StockRank_SwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRank_SwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9486F0D128386AE60069AEB0 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		F9CE22E32E6297C8004A0FC8 /* StockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				9486F0D128386AE60069AEB0 /* StockModel.swift */,
 				9486F0A928386AC10069AEB0 /* StockRankView.swift */,
 				943FC92B2847038200CF742D /* StockRankRow.swift */,
+				F9CE22E32E6297C8004A0FC8 /* StockDetailView.swift */,
 				9486F0AB28386AC20069AEB0 /* Assets.xcassets */,
 				9486F0AD28386AC20069AEB0 /* Preview Content */,
 			);
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9486F0AA28386AC10069AEB0 /* StockRankView.swift in Sources */,
+				F9CE22E42E6297C8004A0FC8 /* StockDetailView.swift in Sources */,
 				943FC92C2847038200CF742D /* StockRankRow.swift in Sources */,
 				9486F0A828386AC10069AEB0 /* StockRank_SwiftUIApp.swift in Sources */,
 				9486F0D228386AE60069AEB0 /* StockModel.swift in Sources */,
