@@ -8,7 +8,6 @@
 import Foundation
 
 struct UserProfile: Hashable, Identifiable, Decodable {
-    
     var id: Int64
     var login: String
     var name: String
