@@ -66,7 +66,7 @@ class UserProfileViewController: UIViewController {
         self.loginLabel.text = user.login
         self.followerLabel.text = "follower: \(user.followers)"
         self.followingLabel.text = "following: \(user.following)"
-        self.thumbnail.image = nil
+        self.thumbnail.kf.setImage(with: user.avatarUrl)
         
     }
 }
@@ -117,6 +117,12 @@ extension UserProfileViewController: UISearchBarDelegate {
             .receive(on: RunLoop.main)
             .sink { compltion in
                 print("comletion: \(compltion)")
+                
+                switch compltion {
+                case .failure(let error):
+                    self.user = nil
+                case .finished: break
+                }
             } receiveValue: { user in
                 self.user = user
             }.store(in: &subscriptions)
