@@ -61,7 +61,7 @@ class FrameworkListViewController: UIViewController {
             .sink { Framework in
                 let sb = UIStoryboard(name: "Detail", bundle: nil)
                 let vc = sb.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
-                vc.framework.send(Framework)
+                vc.viewModel = FrameworkDetailViewModel(framework: Framework)
                 self.present(vc, animated: true)
             }.store(in: &subscriptions)
         
