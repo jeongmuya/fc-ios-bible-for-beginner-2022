@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct FrameworkDetailView: View {
+    
+    @Binding var framework: AppleFramework
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(framework.imageName)
+            Text(framework.name)
+            Text(framework.description)
+            
+            Button {
+                print(" ----> Tapped")
+            } label: {
+                Text("Button")
+            }
+        }
     }
 }
 
 #Preview {
-    FrameworkDetailView()
+    FrameworkDetailView(framework:
+            .constant(AppleFramework.list[0]))
 }

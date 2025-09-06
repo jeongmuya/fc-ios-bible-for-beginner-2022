@@ -17,6 +17,8 @@
 		9486F0FD283883B40069AEB0 /* AppleFramework_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486F0FC283883B40069AEB0 /* AppleFramework_SwiftUIUITests.swift */; };
 		9486F0FF283883B40069AEB0 /* AppleFramework_SwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486F0FE283883B40069AEB0 /* AppleFramework_SwiftUIUITestsLaunchTests.swift */; };
 		9486F10C283883D60069AEB0 /* FramewokData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486F10B283883D60069AEB0 /* FramewokData.swift */; };
+		F9508FEA2E6C77A4009FD896 /* FrameworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9508FE92E6C77A4009FD896 /* FrameworkDetailView.swift */; };
+		F9508FEC2E6C79A1009FD896 /* FrameworkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9508FEB2E6C79A1009FD896 /* FrameworkListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		9486F0FC283883B40069AEB0 /* AppleFramework_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFramework_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		9486F0FE283883B40069AEB0 /* AppleFramework_SwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFramework_SwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9486F10B283883D60069AEB0 /* FramewokData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramewokData.swift; sourceTree = "<group>"; };
+		F9508FE92E6C77A4009FD896 /* FrameworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailView.swift; sourceTree = "<group>"; };
+		F9508FEB2E6C79A1009FD896 /* FrameworkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 			children = (
 				9486F0E1283883B30069AEB0 /* AppleFramework_SwiftUIApp.swift */,
 				9486F0E3283883B30069AEB0 /* FrameworkListView.swift */,
+				F9508FEB2E6C79A1009FD896 /* FrameworkListViewModel.swift */,
+				F9508FE92E6C77A4009FD896 /* FrameworkDetailView.swift */,
 				943FC92D2847177700CF742D /* FrameworkCell.swift */,
 				9486F10B283883D60069AEB0 /* FramewokData.swift */,
 				94768D4A2858DEB300F507E4 /* SafariView.swift */,
@@ -268,6 +274,8 @@
 			files = (
 				943FC92E2847177700CF742D /* FrameworkCell.swift in Sources */,
 				9486F0E4283883B30069AEB0 /* FrameworkListView.swift in Sources */,
+				F9508FEC2E6C79A1009FD896 /* FrameworkListViewModel.swift in Sources */,
+				F9508FEA2E6C77A4009FD896 /* FrameworkDetailView.swift in Sources */,
 				9486F10C283883D60069AEB0 /* FramewokData.swift in Sources */,
 				9486F0E2283883B30069AEB0 /* AppleFramework_SwiftUIApp.swift in Sources */,
 				94768D4B2858DEB300F507E4 /* SafariView.swift in Sources */,
