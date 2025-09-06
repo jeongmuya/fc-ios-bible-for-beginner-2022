@@ -30,15 +30,22 @@ struct FrameworkListView: View {
                 LazyVGrid(columns: layout) {
                     ForEach($vm.models) { $item in
                         FrameworkCell(framework: $item)
+                            .onTapGesture {
+                                vm.isShowingDetail = true
+                                vm.selectedItem = item
+                            }
                     }
                 }
                 .padding([.top, .leading, .trailing], 16.0)
             }
             .navigationTitle("☀️ Apple Framework")
         }
-//        .sheet(isPresented: $isPresented) {
-//            EmptyView()
+//        .sheet(isPresented: $vm.isShowingDetail) {
+//            FrameworkDetailView(framework: $vm.selectedItem)
 //        }
+        .fullScreenCover(isPresented: $vm.isShowingDetail) {
+            FrameworkDetailView(framework: $vm.selectedItem)
+        }
         
     }
 }
