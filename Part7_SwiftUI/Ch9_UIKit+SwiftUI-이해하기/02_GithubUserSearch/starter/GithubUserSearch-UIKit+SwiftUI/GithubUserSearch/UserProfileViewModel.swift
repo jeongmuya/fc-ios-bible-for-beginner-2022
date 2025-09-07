@@ -16,6 +16,8 @@ final class UserProfileViewModel: ObservableObject {
     
    @Published var selectedUser: UserProfile?
     
+    var subscriptions = Set<AnyCancellable>()
+    
     init(network: NetworkService, loginID: String) {
         self.network = network
         self.loginID = loginID
@@ -34,5 +36,33 @@ final class UserProfileViewModel: ObservableObject {
     var following: String {
         guard let value = selectedUser?.following else { return "" }
         return "followers: \(value)"
+    }
+    
+    var imageURL: URL? {
+        return selectedUser?.avatarUrl
+    }
+    
+    func search(keyword: String) {
+        let resource: Resource<UserProfile> = Resource(
+            base: "https://api.github.com/",
+            path: "users/\(keyword)",
+            params: [:],
+            header: ["Content-Type": "application/json"]
+        )
+        
+        network.load(resource)
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    self.selectedUser = nil
+                    print("Error: \(error)")
+                case .finished:
+                    break
+                }
+            }, receiveValue: { user in
+                self.selectedUser = user
+            })
+            .store(in: &subscriptions)
     }
 }
