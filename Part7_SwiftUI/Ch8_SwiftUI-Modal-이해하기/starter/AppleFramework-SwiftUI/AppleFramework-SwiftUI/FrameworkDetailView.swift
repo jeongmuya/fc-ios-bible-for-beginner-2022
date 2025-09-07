@@ -31,7 +31,6 @@ struct FrameworkDetailView: View {
                 Text("Learn More")
                     .font(.system(size: 20, weight: .bold, design: .default))
                     .foregroundColor(.white)
-                
             }
             .frame(maxWidth: .infinity, minHeight: 80)
             .background(.pink)
