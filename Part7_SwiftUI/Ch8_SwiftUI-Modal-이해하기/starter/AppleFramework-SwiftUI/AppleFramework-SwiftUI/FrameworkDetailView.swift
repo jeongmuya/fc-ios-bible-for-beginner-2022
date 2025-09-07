@@ -26,7 +26,7 @@ struct FrameworkDetailView: View {
             Spacer()
             
             Button {
-                print(" ----> Tapped")
+                viewModel.isSafariPresented = true
             } label: {
                 Text("Learn More")
                     .font(.system(size: 20, weight: .bold, design: .default))
@@ -37,6 +37,10 @@ struct FrameworkDetailView: View {
             .cornerRadius(40)
         }
         .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
+        .sheet(isPresented: $viewModel.isSafariPresented) {
+            let url = URL(string: viewModel.framework.urlString)!
+            SafariView(url: url)
+        }
     }
 }
 
