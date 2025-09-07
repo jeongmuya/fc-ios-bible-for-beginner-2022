@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct UserProfileView: View {
+    
+    @StateObject var viewModel: UserProfileViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image("")
+                .frame(width: 160, height: 160)
+                .background(Color.gray)
+                .cornerRadius(80)
+            
+            Text(viewModel.name)
+            Text(viewModel.login)
+            Text(viewModel.followers)
+            Text(viewModel.following)
+        }
     }
 }
 
 #Preview {
-    UserProfileView()
+    UserProfileView(viewModel: UserProfileViewModel(network: NetworkService(configuration: .default), loginID: "cafielo"))
 }
