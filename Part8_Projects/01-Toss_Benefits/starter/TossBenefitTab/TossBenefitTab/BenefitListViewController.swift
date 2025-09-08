@@ -13,5 +13,4 @@ class BenefitListViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "혜택"
     }
-
 }
