@@ -21,6 +21,7 @@
 		F9E2B1892E715C750065C33A /* MyPointCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B1882E715C750065C33A /* MyPointCell.swift */; };
 		F9E2B18B2E715C890065C33A /* TodayBenefitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B18A2E715C890065C33A /* TodayBenefitCell.swift */; };
 		F9E2B18D2E715C980065C33A /* BenefitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B18C2E715C980065C33A /* BenefitCell.swift */; };
+		F9E2B18F2E717D2C0065C33A /* TodaySectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B18E2E717D2C0065C33A /* TodaySectionItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F9E2B1882E715C750065C33A /* MyPointCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPointCell.swift; sourceTree = "<group>"; };
 		F9E2B18A2E715C890065C33A /* TodayBenefitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBenefitCell.swift; sourceTree = "<group>"; };
 		F9E2B18C2E715C980065C33A /* BenefitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitCell.swift; sourceTree = "<group>"; };
+		F9E2B18E2E717D2C0065C33A /* TodaySectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySectionItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +111,9 @@
 		94BD3354285D5C9E008DA3B7 /* TossBenefitTab */ = {
 			isa = PBXGroup;
 			children = (
-				F9E2B1872E714F840065C33A /* Model */,
 				94BD3355285D5C9E008DA3B7 /* AppDelegate.swift */,
 				94BD3357285D5C9E008DA3B7 /* SceneDelegate.swift */,
+				F9E2B1872E714F840065C33A /* Model */,
 				F9E2B1862E714F5F0065C33A /* Home */,
 				94BD335E285D5CA1008DA3B7 /* Assets.xcassets */,
 				94BD3360285D5CA1008DA3B7 /* LaunchScreen.storyboard */,
@@ -154,6 +156,7 @@
 			children = (
 				F9E2B1812E714F030065C33A /* Benefit.swift */,
 				F9E2B1832E714F2A0065C33A /* MyPoint.swift */,
+				F9E2B18E2E717D2C0065C33A /* TodaySectionItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E2B1842E714F2A0065C33A /* MyPoint.swift in Sources */,
+				F9E2B18F2E717D2C0065C33A /* TodaySectionItem.swift in Sources */,
 				F9E2B18D2E715C980065C33A /* BenefitCell.swift in Sources */,
 				F9508FF92E6F2898009FD896 /* BenefitListViewController.swift in Sources */,
 				F9E2B1822E714F030065C33A /* Benefit.swift in Sources */,
