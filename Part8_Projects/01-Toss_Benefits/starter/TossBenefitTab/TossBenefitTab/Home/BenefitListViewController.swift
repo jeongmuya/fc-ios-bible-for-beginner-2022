@@ -27,7 +27,7 @@ class BenefitListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        
         
         
         datasource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
@@ -45,6 +45,7 @@ class BenefitListViewController: UIViewController {
         datasource.apply(snapshot)
         
         collectionView.collectionViewLayout = layout()
+        collectionView.delegate = self
         
         
         navigationItem.title = "혜택"
@@ -56,29 +57,49 @@ class BenefitListViewController: UIViewController {
         case .today:
             if let point = item as? MyPoint {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyPointCell", for: indexPath) as! MyPointCell
-                
+                //                cell.configure(item: point)
                 return cell
             } else if let benefit = item as? Benefit {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayBenefitCell", for: indexPath) as! TodayBenefitCell
                 return cell
-                
+                //                cell.configure(item: Benefit)
             } else {
                 return nil
             }
         case .other:
             if let benefit = item as? Benefit {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BenefitCell", for: indexPath) as! BenefitCell
-                
+                //                cell.configure(item: Benefit)
+                return cell
             } else {
                 return nil
             }
         }
     }
-    
     private func layout() -> UICollectionViewCompositionalLayout {
         
+        let spacing: CGFloat = 10
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(60))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(60))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems:[item])
+            group.interItemSpacing = .fixed(10)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets
+         = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 0, trailing: 16)
+        section.interGroupSpacing = spacing
+        
+        return UICollectionViewCompositionalLayout(section: section)
     }
-    
-    
-    
+}
+
+extension BenefitListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let item = datasource.itemIdentifier(for: indexPath)
+        print("--->> \(item)")
+    }
 }
