@@ -57,19 +57,19 @@ class BenefitListViewController: UIViewController {
         case .today:
             if let point = item as? MyPoint {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyPointCell", for: indexPath) as! MyPointCell
-                //                cell.configure(item: point)
+                cell.configure(item: point)
                 return cell
             } else if let benefit = item as? Benefit {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayBenefitCell", for: indexPath) as! TodayBenefitCell
+                cell.configure(item: benefit)
                 return cell
-                //                cell.configure(item: Benefit)
             } else {
                 return nil
             }
         case .other:
             if let benefit = item as? Benefit {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BenefitCell", for: indexPath) as! BenefitCell
-                //                cell.configure(item: Benefit)
+                cell.configure(item: benefit)
                 return cell
             } else {
                 return nil

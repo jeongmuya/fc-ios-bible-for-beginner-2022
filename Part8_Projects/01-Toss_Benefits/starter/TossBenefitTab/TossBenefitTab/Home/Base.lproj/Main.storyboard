@@ -68,8 +68,13 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="389" height="128"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="l7I-2G-mMw" id="f1N-MI-9AY"/>
+                                            <outlet property="iconView" destination="6Uk-hc-taX" id="YO1-MU-YKY"/>
+                                            <outlet property="pointLabel" destination="VWN-bd-0cj" id="9p3-fX-Lwe"/>
+                                        </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodayBenefitCell" id="5pD-rN-HvW" customClass="TodayBenefitCell" customModule="TossBenefitTab" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TodayBenefitCell" reuseIdentifier="TodayBenefitCell" id="5pD-rN-HvW" customClass="TodayBenefitCell" customModule="TossBenefitTab" customModuleProvider="target">
                                         <rect key="frame" x="6.666666666666667" y="138" width="389" height="261"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1E1-nE-cLR">
@@ -84,7 +89,7 @@
                                                     </constraints>
                                                     <imageReference key="image" image="sparkles" catalog="system" renderingMode="original"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYQ-FR-E4h">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYQ-FR-E4h">
                                                     <rect key="frame" x="163.66666666666666" y="120" width="62" height="29"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <nil key="textColor"/>
@@ -102,7 +107,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="khu-jl-BfC" firstAttribute="centerX" secondItem="1E1-nE-cLR" secondAttribute="centerX" id="0BA-8V-bQl"/>
+                                                <constraint firstItem="khu-jl-BfC" firstAttribute="centerX" secondItem="1E1-nE-cLR" secondAttribute="centerX" constant="1.5" id="0BA-8V-bQl"/>
                                                 <constraint firstItem="khu-jl-BfC" firstAttribute="top" secondItem="LYQ-FR-E4h" secondAttribute="bottom" constant="20" id="5jA-2m-aW5"/>
                                                 <constraint firstItem="LYQ-FR-E4h" firstAttribute="top" secondItem="TO3-I6-NPM" secondAttribute="bottom" constant="20" id="UBc-it-eos"/>
                                                 <constraint firstAttribute="bottom" secondItem="khu-jl-BfC" secondAttribute="bottom" constant="25" id="WPd-vT-7cl"/>
@@ -112,6 +117,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="389" height="261"/>
+                                        <connections>
+                                            <outlet property="ctaButton" destination="khu-jl-BfC" id="dzp-ni-goT"/>
+                                            <outlet property="titleLabel" destination="LYQ-FR-E4h" id="sjN-np-rSS"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BenefitCell" id="2Bs-x4-m4d" customClass="BenefitCell" customModule="TossBenefitTab" customModuleProvider="target">
                                         <rect key="frame" x="5" y="409" width="392" height="128"/>
@@ -127,16 +136,16 @@
                                                         <constraint firstAttribute="height" constant="80" id="SDE-7E-JWP"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORW-5a-wUi">
-                                                    <rect key="frame" x="100" y="65" width="47" height="21.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" name="AccentColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlS-2O-BTo">
                                                     <rect key="frame" x="100" y="38" width="51" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORW-5a-wUi">
+                                                    <rect key="frame" x="100" y="65" width="47" height="21.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" name="AccentColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -152,6 +161,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="392" height="128"/>
+                                        <connections>
+                                            <outlet property="benefitImage" destination="FZs-YW-uaG" id="3M1-Uy-zaD"/>
+                                            <outlet property="descriptionLabel" destination="FlS-2O-BTo" id="jsk-4n-qWs"/>
+                                            <outlet property="titleLabel" destination="ORW-5a-wUi" id="zOe-bZ-gAR"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
