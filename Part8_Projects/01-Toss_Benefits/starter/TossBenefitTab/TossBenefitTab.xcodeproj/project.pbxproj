@@ -22,6 +22,8 @@
 		F9E2B18B2E715C890065C33A /* TodayBenefitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B18A2E715C890065C33A /* TodayBenefitCell.swift */; };
 		F9E2B18D2E715C980065C33A /* BenefitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B18C2E715C980065C33A /* BenefitCell.swift */; };
 		F9E2B18F2E717D2C0065C33A /* TodaySectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B18E2E717D2C0065C33A /* TodaySectionItem.swift */; };
+		F9E2B1E72E782ADC0065C33A /* MyPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E2B1E62E782ADC0065C33A /* MyPoint.storyboard */; };
+		F9E2B1E92E782B020065C33A /* MyPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B1E82E782B020065C33A /* MyPointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		F9E2B18A2E715C890065C33A /* TodayBenefitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBenefitCell.swift; sourceTree = "<group>"; };
 		F9E2B18C2E715C980065C33A /* BenefitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitCell.swift; sourceTree = "<group>"; };
 		F9E2B18E2E717D2C0065C33A /* TodaySectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySectionItem.swift; sourceTree = "<group>"; };
+		F9E2B1E62E782ADC0065C33A /* MyPoint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPoint.storyboard; sourceTree = "<group>"; };
+		F9E2B1E82E782B020065C33A /* MyPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 			children = (
 				94BD3355285D5C9E008DA3B7 /* AppDelegate.swift */,
 				94BD3357285D5C9E008DA3B7 /* SceneDelegate.swift */,
+				F9E2B1EA2E782B110065C33A /* MyPoint */,
 				F9E2B1872E714F840065C33A /* Model */,
 				F9E2B1862E714F5F0065C33A /* Home */,
 				94BD335E285D5CA1008DA3B7 /* Assets.xcassets */,
@@ -159,6 +164,15 @@
 				F9E2B18E2E717D2C0065C33A /* TodaySectionItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F9E2B1EA2E782B110065C33A /* MyPoint */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2B1E62E782ADC0065C33A /* MyPoint.storyboard */,
+				F9E2B1E82E782B020065C33A /* MyPointViewController.swift */,
+			);
+			path = MyPoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94BD3362285D5CA1008DA3B7 /* LaunchScreen.storyboard in Resources */,
+				F9E2B1E72E782ADC0065C33A /* MyPoint.storyboard in Resources */,
 				94BD335F285D5CA1008DA3B7 /* Assets.xcassets in Resources */,
 				94BD335D285D5C9E008DA3B7 /* Main.storyboard in Resources */,
 			);
@@ -301,6 +316,7 @@
 				94BD3356285D5C9E008DA3B7 /* AppDelegate.swift in Sources */,
 				F9E2B1892E715C750065C33A /* MyPointCell.swift in Sources */,
 				94BD3358285D5C9E008DA3B7 /* SceneDelegate.swift in Sources */,
+				F9E2B1E92E782B020065C33A /* MyPointViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Point View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MyPointViewController" id="Y6W-OH-hqX" customClass="MyPointViewController" customModule="TossBenefitTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DKZ-eJ-epl">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dq-7O-oJm">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Oth-Ck-gh0">
+                                                <rect key="frame" x="30" y="119.66666666666664" width="333" height="60.333333333333329"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 포인트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ec-uw-riJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="333" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALt-1K-a2U">
+                                                        <rect key="frame" x="0.0" y="20.333333333333343" width="333" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="AMw-UE-46f"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="z63-9s-Wdf">
+                                                <rect key="frame" x="30" y="190" width="333" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qx-8c-jMK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="60"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="출금하기">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIL-mq-9xq">
+                                                        <rect key="frame" x="174" y="0.0" width="159" height="60"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="사용하기">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="9We-Ie-OWS"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="z63-9s-Wdf" firstAttribute="leading" secondItem="1dq-7O-oJm" secondAttribute="leading" constant="30" id="3ij-tM-VP2"/>
+                                            <constraint firstAttribute="bottom" secondItem="z63-9s-Wdf" secondAttribute="bottom" id="GHl-NG-AB4"/>
+                                            <constraint firstItem="Oth-Ck-gh0" firstAttribute="centerX" secondItem="1dq-7O-oJm" secondAttribute="centerX" id="Jg2-Tf-sB5"/>
+                                            <constraint firstItem="Oth-Ck-gh0" firstAttribute="leading" secondItem="1dq-7O-oJm" secondAttribute="leading" constant="30" id="Zpl-1h-zxm"/>
+                                            <constraint firstItem="z63-9s-Wdf" firstAttribute="top" secondItem="Oth-Ck-gh0" secondAttribute="bottom" constant="10" id="hgB-Uo-YNc"/>
+                                            <constraint firstItem="z63-9s-Wdf" firstAttribute="centerX" secondItem="1dq-7O-oJm" secondAttribute="centerX" id="mZF-zL-2d4"/>
+                                            <constraint firstAttribute="height" constant="250" id="s0q-Y2-CEv"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Bp-rR-IoH">
+                                        <rect key="frame" x="0.0" y="250" width="393" height="416"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTA-gC-2NS">
+                                                <rect key="frame" x="119.66666666666669" y="176.66666666666663" width="154" height="43"/>
+                                                <string key="text">내역이 없어요 
+포인트를 모아볼까요?</string>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-t9-y5x">
+                                                <rect key="frame" x="158.66666666666666" y="239.66666666666663" width="76" height="38"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="모으기">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Jc8-t9-y5x" firstAttribute="top" secondItem="nTA-gC-2NS" secondAttribute="bottom" constant="20" id="I0a-Yq-yqG"/>
+                                            <constraint firstItem="nTA-gC-2NS" firstAttribute="centerY" secondItem="5Bp-rR-IoH" secondAttribute="centerY" constant="-10" id="W3O-th-zTG"/>
+                                            <constraint firstItem="Jc8-t9-y5x" firstAttribute="centerX" secondItem="5Bp-rR-IoH" secondAttribute="centerX" id="i5W-cy-omM"/>
+                                            <constraint firstItem="nTA-gC-2NS" firstAttribute="centerX" secondItem="5Bp-rR-IoH" secondAttribute="centerX" id="iNy-4B-ShB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DKZ-eJ-epl" secondAttribute="trailing" id="6NY-2E-wb0"/>
+                            <constraint firstItem="DKZ-eJ-epl" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="BXN-U5-2Ae"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="DKZ-eJ-epl" secondAttribute="top" id="Bfa-X6-inC"/>
+                            <constraint firstItem="DKZ-eJ-epl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GqB-EU-jjJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pointLabel" destination="ALt-1K-a2U" id="guR-ti-VM1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
