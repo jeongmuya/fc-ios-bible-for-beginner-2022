@@ -9,7 +9,6 @@ import UIKit
 
 class MyPointViewController: UIViewController {
     
-    
     @IBOutlet var pointLabel: UILabel!
     
     var point: MyPoint = .default
