@@ -93,6 +93,7 @@
                     </view>
                     <connections>
                         <outlet property="ctaButton" destination="koX-TO-8y4" id="G8d-Wk-L3P"/>
+                        <outlet property="vStackView" destination="KFx-Ip-dBn" id="mCz-4F-LFH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
