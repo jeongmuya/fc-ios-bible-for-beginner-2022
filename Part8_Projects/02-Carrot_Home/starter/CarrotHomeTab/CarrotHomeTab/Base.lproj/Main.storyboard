@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--홈-->
         <scene sceneID="HAK-3j-zz1">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="kiz-pv-WGW" customClass="HomeViewController" customModule="CarrotHomeTab" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,14 +37,14 @@
                         <viewLayoutGuide key="safeArea" id="IFj-bq-OMM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="crz-En-HtG"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="house" catalog="system" id="crz-En-HtG"/>
                     <navigationItem key="navigationItem" id="xnz-9l-7K1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEc-9Y-mxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-94.02985074626865" y="1027.6887871853546"/>
         </scene>
-        <!--Item-->
+        <!--동네생활-->
         <scene sceneID="7B2-Eu-OW9">
             <objects>
                 <viewController id="1hd-e6-Uad" sceneMemberID="viewController">
@@ -54,13 +54,13 @@
                         <viewLayoutGuide key="safeArea" id="RgX-GS-Enn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="whW-C5-Esw"/>
+                    <tabBarItem key="tabBarItem" title="동네생활" image="document" catalog="system" id="whW-C5-Esw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Guc-Ff-xG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="748" y="1028"/>
         </scene>
-        <!--Item-->
+        <!--내 근처-->
         <scene sceneID="fra-F6-NNc">
             <objects>
                 <viewController id="hHP-QX-GsK" sceneMemberID="viewController">
@@ -70,13 +70,13 @@
                         <viewLayoutGuide key="safeArea" id="hX6-NH-8XP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="WYG-0a-2Pu"/>
+                    <tabBarItem key="tabBarItem" title="내 근처" image="mappin.and.ellipse" catalog="system" id="WYG-0a-2Pu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGn-yh-9SS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1648" y="1028"/>
         </scene>
-        <!--Item-->
+        <!--채팅-->
         <scene sceneID="Nbq-Xl-064">
             <objects>
                 <viewController id="cfh-4w-gJB" sceneMemberID="viewController">
@@ -86,13 +86,13 @@
                         <viewLayoutGuide key="safeArea" id="Xhf-qX-boN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Bv2-vz-rqX"/>
+                    <tabBarItem key="tabBarItem" title="채팅" image="rectangle.3.group.bubble" catalog="system" id="Bv2-vz-rqX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcz-qh-bSb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2551" y="1028"/>
         </scene>
-        <!--Item-->
+        <!--나의 당근-->
         <scene sceneID="7CK-c1-r6w">
             <objects>
                 <viewController id="C7g-zt-ct6" sceneMemberID="viewController">
@@ -102,7 +102,7 @@
                         <viewLayoutGuide key="safeArea" id="aoi-kq-kzF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="vdM-vR-pvA"/>
+                    <tabBarItem key="tabBarItem" title="나의 당근" image="person" catalog="system" id="vdM-vR-pvA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovt-z8-Pd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,6 +151,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="document" catalog="system" width="115" height="128"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="mappin.and.ellipse" catalog="system" width="110" height="128"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="rectangle.3.group.bubble" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
