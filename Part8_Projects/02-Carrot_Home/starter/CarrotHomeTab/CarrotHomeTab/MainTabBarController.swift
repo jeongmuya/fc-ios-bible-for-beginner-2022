@@ -20,6 +20,8 @@ class MainTabBarController: UITabBarController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "헬로우", style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
 
+        
+        
         delegate = self
     }
 
@@ -28,11 +30,16 @@ class MainTabBarController: UITabBarController {
 extension MainTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("---> 어떤 vc:\(viewController)")
+
         
         switch viewController {
         case is HomeViewController:
             
-            let titleItem = UIBarButtonItem(title: "정자동", style: .plain, target: nil, action: nil)
+            let titleConfig = CutomBarItemConfiguration(title: "정자동", handler: { })
+            let customTitleView = CustomBarItem(config: titleConfig)
+            let titleItem = UIBarButtonItem(customView: customTitleView)
+            
+//            let titleItem = UIBarButtonItem(title: "정자동", style: .plain, target: nil, action: nil)
             let feedItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
             
             navigationItem.leftBarButtonItem = titleItem
