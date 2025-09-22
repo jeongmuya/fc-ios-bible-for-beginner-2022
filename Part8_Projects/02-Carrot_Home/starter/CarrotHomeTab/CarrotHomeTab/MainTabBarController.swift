@@ -7,23 +7,69 @@
 
 import UIKit
 
+// [✅]  탭이 눌를때마다, 그에 맞는 네비게이션 바를 구성하고 싶어요...
+// [✅]  탭이 눌리는 것을 감지 해야겠다.
+// [✅]  탭이 감지후에, 그 탭에 맞게 네비게이션 바 구성을 업데이트 해줘야겠다.
+// ✅
+
 class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "헬로우", style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
+
+        delegate = self
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension MainTabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("---> 어떤 vc:\(viewController)")
+        
+        switch viewController {
+        case is HomeViewController:
+            
+            let titleItem = UIBarButtonItem(title: "정자동", style: .plain, target: nil, action: nil)
+            let feedItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+            
+            navigationItem.leftBarButtonItem = titleItem
+            navigationItem.rightBarButtonItem = feedItem
+            
+        case is MyTownViewController:
+
+            let titleItem = UIBarButtonItem(title: "정자동", style: .plain, target: nil, action: nil)
+            let feedItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+            
+            navigationItem.leftBarButtonItem = titleItem
+            navigationItem.rightBarButtonItem = feedItem
+            
+        case is ChatViewController:
+            
+            let titleItem = UIBarButtonItem(title: "채팅", style: .plain, target: nil, action: nil)
+            let feedItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+            
+            navigationItem.leftBarButtonItem = titleItem
+            navigationItem.rightBarButtonItem = feedItem
+            
+        case is MyProfileViewController:
+            
+            let titleItem = UIBarButtonItem(title: "나의 당근", style: .plain, target: nil, action: nil)
+            let feedItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+            
+            navigationItem.leftBarButtonItem = titleItem
+            navigationItem.rightBarButtonItem = feedItem
+            
+        default:
+            
+            let titleItem = UIBarButtonItem(title: "당근 당근", style: .plain, target: nil, action: nil)
+            let feedItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+            
+            navigationItem.leftBarButtonItem = titleItem
+            navigationItem.rightBarButtonItem = feedItem
+            
+        }
     }
-    */
-
 }
