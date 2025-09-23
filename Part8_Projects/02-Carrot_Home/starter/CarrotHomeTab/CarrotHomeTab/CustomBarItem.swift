@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct CutomBarItemConfiguration {
+struct CustomBarItemConfiguration {
     
     typealias Handler = () -> Void
     
@@ -27,11 +27,11 @@ struct CutomBarItemConfiguration {
 final class CustomBarItem: UIButton {
     // 타이틀, 이미지, 액션 핸들러
     
-    var customBarItmeConfig: CutomBarItemConfiguration
+    var customBarItmeConfig: CustomBarItemConfiguration
     
     var handler: (()-> Void)?
     
-    init(config: CutomBarItemConfiguration) {
+    init(config: CustomBarItemConfiguration) {
         self.customBarItmeConfig = config
         super.init(frame: .zero)
         setupStyle()

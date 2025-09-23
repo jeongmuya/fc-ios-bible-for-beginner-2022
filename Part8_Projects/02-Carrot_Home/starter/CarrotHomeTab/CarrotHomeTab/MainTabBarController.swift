@@ -20,8 +20,6 @@ class MainTabBarController: UITabBarController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "헬로우", style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
 
-        
-        
         delegate = self
     }
 
@@ -35,9 +33,12 @@ extension MainTabBarController: UITabBarControllerDelegate {
         switch viewController {
         case is HomeViewController:
             
-            let titleConfig = CutomBarItemConfiguration(title: "정자동", handler: { })
+            let titleConfig = CustomBarItemConfiguration(title: "정자동", handler: { })
             let customTitleView = CustomBarItem(config: titleConfig)
             let titleItem = UIBarButtonItem(customView: customTitleView)
+            
+            let searchConfig = CustomBarItemConfiguration(image: UIImage(contentsOfFile: "magnifyingglass"), handler: { print("---> search tapped")})
+            let searchView = CustomBarItem(config: searchConfig)
             
 //            let titleItem = UIBarButtonItem(title: "정자동", style: .plain, target: nil, action: nil)
             let feedItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
