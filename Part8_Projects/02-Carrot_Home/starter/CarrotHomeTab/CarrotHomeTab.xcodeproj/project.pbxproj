@@ -19,6 +19,7 @@
 		94BB229528669A17004FC34D /* CarrotHomeTabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB229428669A17004FC34D /* CarrotHomeTabTests.swift */; };
 		94BB229F28669A17004FC34D /* CarrotHomeTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB229E28669A17004FC34D /* CarrotHomeTabUITests.swift */; };
 		94BB22A128669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB22A028669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift */; };
+		F909A13E2E843116003750FE /* UIBarButtonItem+CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909A13D2E843116003750FE /* UIBarButtonItem+CustomView.swift */; };
 		F9B4D9562E804190000EBBEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9552E804190000EBBEF /* HomeViewController.swift */; };
 		F9B4D9582E8041C0000EBBEF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9572E8041C0000EBBEF /* DetailViewController.swift */; };
 		F9B4D95A2E804249000EBBEF /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9592E804249000EBBEF /* MainNavigationViewController.swift */; };
@@ -64,6 +65,7 @@
 		94BB229A28669A17004FC34D /* CarrotHomeTabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarrotHomeTabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BB229E28669A17004FC34D /* CarrotHomeTabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotHomeTabUITests.swift; sourceTree = "<group>"; };
 		94BB22A028669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotHomeTabUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F909A13D2E843116003750FE /* UIBarButtonItem+CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+CustomView.swift"; sourceTree = "<group>"; };
 		F9B4D9552E804190000EBBEF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F9B4D9572E8041C0000EBBEF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F9B4D9592E804249000EBBEF /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				F9B4D9552E804190000EBBEF /* HomeViewController.swift */,
 				F9B4D9592E804249000EBBEF /* MainNavigationViewController.swift */,
 				F9B4D95B2E804276000EBBEF /* MainTabBarController.swift */,
+				F909A13D2E843116003750FE /* UIBarButtonItem+CustomView.swift */,
 				F9B4D9652E815D5F000EBBEF /* CustomBarItem.swift */,
 				F9B4D95F2E814D12000EBBEF /* MyTownViewController.swift */,
 				F9B4D9612E814D26000EBBEF /* MyProfileViewController.swift */,
@@ -335,6 +338,7 @@
 				F9B4D9642E814D32000EBBEF /* ChatViewController.swift in Sources */,
 				F9B4D9602E814D13000EBBEF /* MyTownViewController.swift in Sources */,
 				F9B4D9662E815D5F000EBBEF /* CustomBarItem.swift in Sources */,
+				F909A13E2E843116003750FE /* UIBarButtonItem+CustomView.swift in Sources */,
 				9402EE1228673D9C00D33FDD /* Resource.swift in Sources */,
 				F9B4D9582E8041C0000EBBEF /* DetailViewController.swift in Sources */,
 			);
