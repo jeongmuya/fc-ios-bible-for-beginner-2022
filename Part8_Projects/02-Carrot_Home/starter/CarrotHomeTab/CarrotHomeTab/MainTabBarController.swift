@@ -17,6 +17,9 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+        
+        self.selectedIndex
+        self.selectedViewController
     }
 
     private func updateNavigationItem(vc: UIViewController) {
