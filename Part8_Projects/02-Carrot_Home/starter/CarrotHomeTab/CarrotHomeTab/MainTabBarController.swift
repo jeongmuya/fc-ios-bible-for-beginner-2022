@@ -55,7 +55,6 @@ extension MainTabBarController: UITabBarControllerDelegate {
             let feedConfig = CustomBarItemConfiguration(image: UIImage(systemName: "bell"), handler: { print("---> feed tapped")})
             let feedItem = UIBarButtonItem.generate(with: feedConfig, width: 30)
         
-            
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [feedItem]
 
