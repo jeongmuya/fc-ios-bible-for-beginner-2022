@@ -17,21 +17,18 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        
-        self.selectedIndex
-        self.selectedViewController
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateNavigationItem(vc: self.selectedViewController!)
 
+    }
+    
     private func updateNavigationItem(vc: UIViewController) {
         
-    }
-}
-
-extension MainTabBarController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-
-        
-        switch viewController {
+        switch vc {
         case is HomeViewController:
             
             let titleConfig = CustomBarItemConfiguration(title: "정자동", handler: { })
@@ -44,9 +41,9 @@ extension MainTabBarController: UITabBarControllerDelegate {
             let feedConfig = CustomBarItemConfiguration(image: UIImage(systemName: "bell"), handler: { print("---> feed tapped")})
             let feedItem = UIBarButtonItem.generate(with: feedConfig, width: 30)
         
-            
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [feedItem, searchItem]
+            navigationItem.backButtonDisplayMode = .minimal
             
         case is MyTownViewController:
             let titleConfig = CustomBarItemConfiguration(title: "정자동", handler: { })
@@ -57,6 +54,7 @@ extension MainTabBarController: UITabBarControllerDelegate {
         
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [feedItem]
+            navigationItem.backButtonDisplayMode = .minimal
 
             
         case is ChatViewController:
@@ -69,6 +67,7 @@ extension MainTabBarController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [feedItem]
+            navigationItem.backButtonDisplayMode = .minimal
             
         case is MyProfileViewController:
             
@@ -80,6 +79,7 @@ extension MainTabBarController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [settingItem]
+            navigationItem.backButtonDisplayMode = .minimal
             
         default:
             
@@ -88,7 +88,16 @@ extension MainTabBarController: UITabBarControllerDelegate {
         
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = []
+            navigationItem.backButtonDisplayMode = .minimal
             
         }
+        
+    }
+}
+
+extension MainTabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        updateNavigationItem(vc: viewController)
+       
     }
 }
