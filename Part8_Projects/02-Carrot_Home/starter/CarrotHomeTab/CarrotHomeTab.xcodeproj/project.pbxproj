@@ -20,6 +20,8 @@
 		94BB229F28669A17004FC34D /* CarrotHomeTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB229E28669A17004FC34D /* CarrotHomeTabUITests.swift */; };
 		94BB22A128669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB22A028669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift */; };
 		F909A13E2E843116003750FE /* UIBarButtonItem+CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909A13D2E843116003750FE /* UIBarButtonItem+CustomView.swift */; };
+		F968FE312E897C6A00097A59 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F968FE2F2E897C6900097A59 /* Home.storyboard */; };
+		F968FE332E897CB200097A59 /* HomeViweModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968FE322E897CB200097A59 /* HomeViweModel.swift */; };
 		F9B4D9562E804190000EBBEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9552E804190000EBBEF /* HomeViewController.swift */; };
 		F9B4D9582E8041C0000EBBEF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9572E8041C0000EBBEF /* DetailViewController.swift */; };
 		F9B4D95A2E804249000EBBEF /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9592E804249000EBBEF /* MainNavigationViewController.swift */; };
@@ -66,6 +68,8 @@
 		94BB229E28669A17004FC34D /* CarrotHomeTabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotHomeTabUITests.swift; sourceTree = "<group>"; };
 		94BB22A028669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotHomeTabUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F909A13D2E843116003750FE /* UIBarButtonItem+CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+CustomView.swift"; sourceTree = "<group>"; };
+		F968FE302E897C6900097A59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../Views/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		F968FE322E897CB200097A59 /* HomeViweModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViweModel.swift; sourceTree = "<group>"; };
 		F9B4D9552E804190000EBBEF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F9B4D9572E8041C0000EBBEF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F9B4D9592E804249000EBBEF /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
@@ -152,22 +156,18 @@
 			children = (
 				94BB227D28669A15004FC34D /* AppDelegate.swift */,
 				94BB227F28669A15004FC34D /* SceneDelegate.swift */,
-				94A38E57286830EA000691E1 /* Main.storyboard */,
-				F9B4D9552E804190000EBBEF /* HomeViewController.swift */,
-				F9B4D9592E804249000EBBEF /* MainNavigationViewController.swift */,
-				F9B4D95B2E804276000EBBEF /* MainTabBarController.swift */,
-				F909A13D2E843116003750FE /* UIBarButtonItem+CustomView.swift */,
-				F9B4D9652E815D5F000EBBEF /* CustomBarItem.swift */,
-				F9B4D95F2E814D12000EBBEF /* MyTownViewController.swift */,
-				F9B4D9612E814D26000EBBEF /* MyProfileViewController.swift */,
-				F9B4D9632E814D32000EBBEF /* ChatViewController.swift */,
-				F9B4D9572E8041C0000EBBEF /* DetailViewController.swift */,
-				F9B4D95D2E8042C4000EBBEF /* Detail.storyboard */,
+				F968FE2E2E897B7400097A59 /* Views */,
+				94A38E4B2868307C000691E1 /* Model */,
+				F968FE282E897AD000097A59 /* Home */,
+				F968FE292E897AE100097A59 /* MyTown */,
+				F968FE2A2E897AF500097A59 /* Chat */,
+				F968FE2B2E897B0200097A59 /* MyProfile */,
+				F968FE2C2E897B1900097A59 /* Detail */,
 				9402EE1528673FB100D33FDD /* Utils */,
 				9402EE0E28673D9C00D33FDD /* Network */,
-				94A38E4B2868307C000691E1 /* Model */,
-				94BB228628669A16004FC34D /* Assets.xcassets */,
+				F968FE2D2E897B2E00097A59 /* Extension */,
 				94BB228828669A16004FC34D /* LaunchScreen.storyboard */,
+				94BB228628669A16004FC34D /* Assets.xcassets */,
 				94BB228B28669A16004FC34D /* Info.plist */,
 			);
 			path = CarrotHomeTab;
@@ -188,6 +188,68 @@
 				94BB22A028669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift */,
 			);
 			path = CarrotHomeTabUITests;
+			sourceTree = "<group>";
+		};
+		F968FE282E897AD000097A59 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F968FE2F2E897C6900097A59 /* Home.storyboard */,
+				F968FE322E897CB200097A59 /* HomeViweModel.swift */,
+				F9B4D9552E804190000EBBEF /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F968FE292E897AE100097A59 /* MyTown */ = {
+			isa = PBXGroup;
+			children = (
+				F9B4D95F2E814D12000EBBEF /* MyTownViewController.swift */,
+			);
+			path = MyTown;
+			sourceTree = "<group>";
+		};
+		F968FE2A2E897AF500097A59 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				F9B4D9632E814D32000EBBEF /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		F968FE2B2E897B0200097A59 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				F9B4D9612E814D26000EBBEF /* MyProfileViewController.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		F968FE2C2E897B1900097A59 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F9B4D9572E8041C0000EBBEF /* DetailViewController.swift */,
+				F9B4D95D2E8042C4000EBBEF /* Detail.storyboard */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F968FE2D2E897B2E00097A59 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F909A13D2E843116003750FE /* UIBarButtonItem+CustomView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F968FE2E2E897B7400097A59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94A38E57286830EA000691E1 /* Main.storyboard */,
+				F9B4D9592E804249000EBBEF /* MainNavigationViewController.swift */,
+				F9B4D95B2E804276000EBBEF /* MainTabBarController.swift */,
+				F9B4D9652E815D5F000EBBEF /* CustomBarItem.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94BB228A28669A16004FC34D /* LaunchScreen.storyboard in Resources */,
+				F968FE312E897C6A00097A59 /* Home.storyboard in Resources */,
 				94A38E5C286830EA000691E1 /* Main.storyboard in Resources */,
 				94BB228728669A16004FC34D /* Assets.xcassets in Resources */,
 				F9B4D95E2E8042C4000EBBEF /* Detail.storyboard in Resources */,
@@ -329,6 +392,7 @@
 				94BB227E28669A15004FC34D /* AppDelegate.swift in Sources */,
 				F9B4D95A2E804249000EBBEF /* MainNavigationViewController.swift in Sources */,
 				F9B4D95C2E804276000EBBEF /* MainTabBarController.swift in Sources */,
+				F968FE332E897CB200097A59 /* HomeViweModel.swift in Sources */,
 				94A38E512868307C000691E1 /* ItemInfo.swift in Sources */,
 				94BB228028669A15004FC34D /* SceneDelegate.swift in Sources */,
 				9402EE1728673FB100D33FDD /* Publisher+Utils.swift in Sources */,
@@ -391,6 +455,14 @@
 				94BB228928669A16004FC34D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F968FE2F2E897C6900097A59 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F968FE302E897C6900097A59 /* Base */,
+			);
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
