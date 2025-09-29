@@ -6,25 +6,33 @@
 //
 
 import UIKit
+import Combine
 
 class HomeViewController: UIViewController {
+    
+    let viewModel: HomeViweModel = HomeViweModel(network: NetworkService(configuration: .default))
+    var subscriptions = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        bind()
+        viewModel.fetch()
     }
     
-
-    @IBAction func ctaButtonTapped(_ sender: Any) {
+    private func bind() {
+        viewModel.$items
+            .receive(on: RunLoop.main)
+            .sink { items in
+                print("--> update collection view \(items)")
+            }.store(in: &subscriptions)
         
-        let sb = UIStoryboard(name: "Detail", bundle: nil)
-        
-        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as!
-        DetailViewController
-        
-        navigationController?.pushViewController(vc, animated: true)
+        viewModel.itemTapped
+            .sink { item in
+                let sb = UIStoryboard(name: "Detail", bundle: nil)
+                let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as!
+                   DetailViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+            }.store(in: &subscriptions)
         
     }
-    
 }
