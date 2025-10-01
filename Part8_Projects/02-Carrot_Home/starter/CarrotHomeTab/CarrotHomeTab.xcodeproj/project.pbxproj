@@ -31,6 +31,7 @@
 		F9B4D9622E814D26000EBBEF /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9612E814D26000EBBEF /* MyProfileViewController.swift */; };
 		F9B4D9642E814D32000EBBEF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9632E814D32000EBBEF /* ChatViewController.swift */; };
 		F9B4D9662E815D5F000EBBEF /* CustomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9652E815D5F000EBBEF /* CustomBarItem.swift */; };
+		F9C577142E8D7D87007F9881 /* ItemInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C577132E8D7D87007F9881 /* ItemInfoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		F9B4D9612E814D26000EBBEF /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		F9B4D9632E814D32000EBBEF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F9B4D9652E815D5F000EBBEF /* CustomBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarItem.swift; sourceTree = "<group>"; };
+		F9C577132E8D7D87007F9881 /* ItemInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				F968FE2F2E897C6900097A59 /* Home.storyboard */,
 				F968FE322E897CB200097A59 /* HomeViweModel.swift */,
 				F9B4D9552E804190000EBBEF /* HomeViewController.swift */,
+				F9C577132E8D7D87007F9881 /* ItemInfoCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				F9B4D9662E815D5F000EBBEF /* CustomBarItem.swift in Sources */,
 				F909A13E2E843116003750FE /* UIBarButtonItem+CustomView.swift in Sources */,
 				9402EE1228673D9C00D33FDD /* Resource.swift in Sources */,
+				F9C577142E8D7D87007F9881 /* ItemInfoCell.swift in Sources */,
 				F9B4D9582E8041C0000EBBEF /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

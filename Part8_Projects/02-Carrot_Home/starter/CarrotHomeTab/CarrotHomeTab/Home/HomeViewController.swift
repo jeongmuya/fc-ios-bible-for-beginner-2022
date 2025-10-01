@@ -10,14 +10,25 @@ import Combine
 
 class HomeViewController: UIViewController {
     
+    
+    @IBOutlet var collectionView: UICollectionView!
+    
+    
+    
     let viewModel: HomeViweModel = HomeViweModel(network: NetworkService(configuration: .default))
     var subscriptions = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCollectionView()
         bind()
         viewModel.fetch()
     }
+    
+    private func configureCollectionView() {
+        
+    }
+    
     
     private func bind() {
         viewModel.$items
