@@ -16,5 +16,5 @@ struct ItemInfo: Codable, Hashable {
     let price: Int
     let numOfChats: Int
     let numOfLikes: Int
-    let thumbnailURL: String
+    var thumbnailURL: String
 }
