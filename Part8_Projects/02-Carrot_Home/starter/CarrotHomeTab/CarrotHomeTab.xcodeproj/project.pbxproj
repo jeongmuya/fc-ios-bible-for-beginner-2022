@@ -23,6 +23,8 @@
 		F968FE312E897C6A00097A59 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F968FE2F2E897C6900097A59 /* Home.storyboard */; };
 		F968FE332E897CB200097A59 /* HomeViweModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968FE322E897CB200097A59 /* HomeViweModel.swift */; };
 		F97E2FEB2E9161EC00530452 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F97E2FEA2E9161EC00530452 /* Kingfisher */; };
+		F97E2FED2E92A70900530452 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97E2FEC2E92A70900530452 /* DetailViewModel.swift */; };
+		F97E2FEF2E92A78000530452 /* ItemInfoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97E2FEE2E92A78000530452 /* ItemInfoDetails.swift */; };
 		F9B4D9562E804190000EBBEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9552E804190000EBBEF /* HomeViewController.swift */; };
 		F9B4D9582E8041C0000EBBEF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9572E8041C0000EBBEF /* DetailViewController.swift */; };
 		F9B4D95A2E804249000EBBEF /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4D9592E804249000EBBEF /* MainNavigationViewController.swift */; };
@@ -72,6 +74,8 @@
 		F909A13D2E843116003750FE /* UIBarButtonItem+CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+CustomView.swift"; sourceTree = "<group>"; };
 		F968FE302E897C6900097A59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../Views/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		F968FE322E897CB200097A59 /* HomeViweModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViweModel.swift; sourceTree = "<group>"; };
+		F97E2FEC2E92A70900530452 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		F97E2FEE2E92A78000530452 /* ItemInfoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoDetails.swift; sourceTree = "<group>"; };
 		F9B4D9552E804190000EBBEF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F9B4D9572E8041C0000EBBEF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F9B4D9592E804249000EBBEF /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				F9B4D9572E8041C0000EBBEF /* DetailViewController.swift */,
+				F97E2FEC2E92A70900530452 /* DetailViewModel.swift */,
+				F97E2FEE2E92A78000530452 /* ItemInfoDetails.swift */,
 				F9B4D95D2E8042C4000EBBEF /* Detail.storyboard */,
 			);
 			path = Detail;
@@ -417,10 +423,12 @@
 				F9B4D9642E814D32000EBBEF /* ChatViewController.swift in Sources */,
 				F9B4D9602E814D13000EBBEF /* MyTownViewController.swift in Sources */,
 				F9B4D9662E815D5F000EBBEF /* CustomBarItem.swift in Sources */,
+				F97E2FED2E92A70900530452 /* DetailViewModel.swift in Sources */,
 				F909A13E2E843116003750FE /* UIBarButtonItem+CustomView.swift in Sources */,
 				9402EE1228673D9C00D33FDD /* Resource.swift in Sources */,
 				F9C577142E8D7D87007F9881 /* ItemInfoCell.swift in Sources */,
 				F9B4D9582E8041C0000EBBEF /* DetailViewController.swift in Sources */,
+				F97E2FEF2E92A78000530452 /* ItemInfoDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
