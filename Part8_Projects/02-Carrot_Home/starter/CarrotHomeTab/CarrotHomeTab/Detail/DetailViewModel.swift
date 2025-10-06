@@ -24,7 +24,7 @@ final class DetailViewModel {
     func fetch() {
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) {
-            self.itemInfoDetails = ItemInfoDetails()
+//            self.itemInfoDetails = ItemInfoDetails()
         }
         
 //        let resource = Resource<ItemInfoDetails>(
