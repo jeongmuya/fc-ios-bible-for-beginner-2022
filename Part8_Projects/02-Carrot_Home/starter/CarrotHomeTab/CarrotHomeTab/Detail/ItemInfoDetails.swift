@@ -15,7 +15,7 @@ struct ItemInfoDetails: Codable {
 
 struct User: Codable {
     let name: String
-    let thumnail: String
+    let thumbnail: String
     let location: String
     let temperature: Int
 }
@@ -23,7 +23,7 @@ struct User: Codable {
 extension User {
     static let mock = User(
         name: "아랑",
-        thumnail: "https://source.unsplash.com/150x150/?person",
+        thumbnail: "https://picsum.photos/150/150",
         location: "분당구 판교동",
         temperature: 46)
 }
