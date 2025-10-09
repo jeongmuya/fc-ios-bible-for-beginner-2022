@@ -20,6 +20,10 @@ class DetailViewController: UIViewController {
     @IBOutlet var itemInfoTitle: UILabel!
     @IBOutlet var itemInfoDescription: UILabel!
     
+    @IBOutlet var ItemPriceLabel: UILabel!
+    
+    
+    
     var viewModel: DetailViewModel!
     var subscriptions = Set<AnyCancellable>()
     
@@ -50,6 +54,7 @@ class DetailViewController: UIViewController {
                 self.itemThumbnail.kf.setImage(with: URL(string: details.item.thumbnailURL))
                 self.itemInfoTitle.text = details.item.title
                 self.itemInfoDescription.text = details.details.descriptions
+                self.ItemPriceLabel.text = "\(self.formatNumber(details.item.price))원"
                 
             }.store(in: &subscriptions)
         
@@ -74,5 +79,15 @@ class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItems = [moreItem, shareItem]
         navigationItem.backButtonDisplayMode = .minimal
         
+    }
+}
+
+
+extension DetailViewController {
+    private func formatNumber(_ price: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        let result = formatter.string(from: NSNumber(integerLiteral: price)) ?? ""
+        return result
     }
 }
