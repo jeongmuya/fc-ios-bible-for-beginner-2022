@@ -169,6 +169,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IoN-XZ-s4c">
                                 <rect key="frame" x="0.0" y="732" width="393" height="120"/>
                                 <subviews>
+                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLt-Dx-Ca2">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Z6v-3h-byS"/>
+                                        </constraints>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WuB-Cz-UmW">
                                         <rect key="frame" x="15" y="10" width="363" height="60"/>
                                         <subviews>
@@ -221,7 +228,10 @@
                                     <constraint firstAttribute="height" constant="120" id="Gex-n7-bFz"/>
                                     <constraint firstItem="WuB-Cz-UmW" firstAttribute="leading" secondItem="IoN-XZ-s4c" secondAttribute="leading" constant="15" id="Npu-wx-ATP"/>
                                     <constraint firstItem="WuB-Cz-UmW" firstAttribute="centerX" secondItem="IoN-XZ-s4c" secondAttribute="centerX" id="awZ-Li-ENs"/>
+                                    <constraint firstAttribute="trailing" secondItem="zLt-Dx-Ca2" secondAttribute="trailing" id="edm-6m-8e0"/>
                                     <constraint firstItem="WuB-Cz-UmW" firstAttribute="top" secondItem="IoN-XZ-s4c" secondAttribute="top" constant="10" id="fPb-QD-Xt9"/>
+                                    <constraint firstItem="zLt-Dx-Ca2" firstAttribute="top" secondItem="IoN-XZ-s4c" secondAttribute="top" id="uUB-Yi-BZ2"/>
+                                    <constraint firstItem="zLt-Dx-Ca2" firstAttribute="leading" secondItem="IoN-XZ-s4c" secondAttribute="leading" id="wWP-2H-Onj"/>
                                 </constraints>
                             </view>
                         </subviews>

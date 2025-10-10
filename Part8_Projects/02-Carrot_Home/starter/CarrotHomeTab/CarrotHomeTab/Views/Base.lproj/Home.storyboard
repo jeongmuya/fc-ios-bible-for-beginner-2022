@@ -133,12 +133,22 @@
                                                         </view>
                                                     </subviews>
                                                 </stackView>
+                                                <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bzr-7U-LZT">
+                                                    <rect key="frame" x="0.0" y="119" width="402.66666666666669" height="1"/>
+                                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="w2K-Lk-QZE"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Bzr-7U-LZT" secondAttribute="trailing" constant="-0.5" id="FuG-eo-sGs"/>
                                                 <constraint firstItem="hZz-ez-7bH" firstAttribute="leading" secondItem="xMY-eY-Aga" secondAttribute="leading" id="Mee-FN-igh"/>
+                                                <constraint firstItem="Bzr-7U-LZT" firstAttribute="leading" secondItem="xMY-eY-Aga" secondAttribute="leading" id="Pb2-PO-Pn8"/>
                                                 <constraint firstAttribute="bottom" secondItem="hZz-ez-7bH" secondAttribute="bottom" id="chU-aS-P0b"/>
                                                 <constraint firstItem="hZz-ez-7bH" firstAttribute="top" secondItem="xMY-eY-Aga" secondAttribute="top" id="sUh-UO-5BP"/>
                                                 <constraint firstAttribute="trailing" secondItem="hZz-ez-7bH" secondAttribute="trailing" id="sdh-4C-oPp"/>
+                                                <constraint firstAttribute="bottom" secondItem="Bzr-7U-LZT" secondAttribute="bottom" id="z48-G7-RRf"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="402" height="120"/>
