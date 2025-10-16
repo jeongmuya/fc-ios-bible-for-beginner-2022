@@ -22,6 +22,7 @@
 		948F904F28700A2C00F90257 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F904E28700A2C00F90257 /* Mood.swift */; };
 		948F905428700A8800F90257 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F905228700A8800F90257 /* Storage.swift */; };
 		948F905528700A8800F90257 /* MoodDiaryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F905328700A8800F90257 /* MoodDiaryStorage.swift */; };
+		F96D85D62EA139440039A3CD /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D85D52EA139440039A3CD /* DiaryViewModel.swift */; };
 		F97E30452E9BD82A00530452 /* MoodDiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97E30442E9BD82A00530452 /* MoodDiaryCell.swift */; };
 		F97E30472E9BDAAB00530452 /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97E30462E9BDAAB00530452 /* DiaryListViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		948F904E28700A2C00F90257 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		948F905228700A8800F90257 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		948F905328700A8800F90257 /* MoodDiaryStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodDiaryStorage.swift; sourceTree = "<group>"; };
+		F96D85D52EA139440039A3CD /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
 		F97E30442E9BD82A00530452 /* MoodDiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDiaryCell.swift; sourceTree = "<group>"; };
 		F97E30462E9BDAAB00530452 /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				948F9041287009AE00F90257 /* DiaryDateInputView.swift */,
+				F96D85D52EA139440039A3CD /* DiaryViewModel.swift */,
 				948F9043287009C000F90257 /* DiaryMoodInputView.swift */,
 				948F9045287009CB00F90257 /* DiaryTextInputView.swift */,
 			);
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96D85D62EA139440039A3CD /* DiaryViewModel.swift in Sources */,
 				F97E30452E9BD82A00530452 /* MoodDiaryCell.swift in Sources */,
 				948F9015287008D100F90257 /* DiaryListView.swift in Sources */,
 				948F9013287008D100F90257 /* EmotionDiaryApp.swift in Sources */,

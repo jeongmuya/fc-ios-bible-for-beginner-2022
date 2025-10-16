@@ -10,6 +10,7 @@ import SwiftUI
 struct DiaryListView: View {
     
     @StateObject var vm: DiaryListViewModel
+    @State var isPresenting: Bool = false
     
     let layout: [GridItem] = [
         GridItem(.flexible()),
@@ -51,7 +52,7 @@ struct DiaryListView: View {
                 }
                 HStack {
                     Button {
-                        print("New Button Tapped")
+                        isPresenting = true
                     } label: {
                         Image(systemName: "plus")
                             .resizable()
@@ -65,6 +66,11 @@ struct DiaryListView: View {
                 }
             }
             .navigationTitle("Emotion Diary")
+        }
+        .sheet(isPresented: $isPresenting) {
+            
+            let vm = DiaryViewModel(isPresented: $isPresenting)
+            DiaryDateInputView(vm: vm)
         }
     }
 }
