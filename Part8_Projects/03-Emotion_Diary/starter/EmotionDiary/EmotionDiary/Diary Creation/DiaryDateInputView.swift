@@ -35,9 +35,7 @@ struct DiaryDateInputView: View {
                         .cornerRadius(40)
                 }
             }
-            
         }
-  
     }
 }
 
