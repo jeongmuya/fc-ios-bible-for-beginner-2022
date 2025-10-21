@@ -6,19 +6,41 @@
 //
 
 import Foundation
+import Combine
 
 final class DiaryListViewModel: ObservableObject {
     
     
+    let storage: MoodDiaryStorage
     
     
-    @Published var list: [MoodDiary] = MoodDiary.list
+    @Published var list: [MoodDiary] = []
     @Published var dic: [String: [MoodDiary]] = [:]
     
-    init() {
-        self.dic = Dictionary(grouping: self.list, by: {$0.monthlyIdentifier}
-        )
+    var subscriptions = Set<AnyCancellable>()
+    
+    init(storage: MoodDiaryStorage){
+        self.storage = storage
+        bind()
     }
+    
+    private func bind() {
+        $list.sink { items in
+            
+            self.dic = Dictionary(grouping: items, by: {$0.monthlyIdentifier})
+            self.persist(items: items)
+        }.store(in: &subscriptions)
+    }
+    
+    func persist(items: [MoodDiary]) {
+        guard items.isEmpty == false else { return }
+        self.storage.persist(items)
+    }
+    
+    func fetch() {
+        self.list = storage.fetch()
+    }
+    
     
     var keys: [String] {
         // given: 2022-5, 2022-4, 2022-6
