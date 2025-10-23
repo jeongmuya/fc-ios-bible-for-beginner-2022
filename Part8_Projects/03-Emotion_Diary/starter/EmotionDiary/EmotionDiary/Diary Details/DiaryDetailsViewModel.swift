@@ -10,13 +10,16 @@ import SwiftUI
 
 final class DiaryDetailsViewModel: ObservableObject {
     
-    @Published var diaryies: Binding<[MoodDiary]>
+    @Published var diaries: Binding<[MoodDiary]>  // ✅ 'diaries'로 수정
     @Published var diary: MoodDiary
     
     
     init(diaries: Binding<[MoodDiary]>, diary: MoodDiary) {
-        self.diaryies = diaries
+        self.diaries = diaries  // ✅ 'diaries'로 수정
         self.diary = diary
     }
     
+    func delete() {
+        diaries.wrappedValue = diaries.wrappedValue.filter { $0.id != diary.id }  // ✅ != 로 수정
+    }
 }

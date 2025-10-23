@@ -2,29 +2,31 @@ import SwiftUI
 
 struct DiaryDetailsView: View {
     
+    @StateObject var vm: DiaryDetailsViewModel
     @Environment(\.colorScheme) var colorScheme
     
-    var diary: MoodDiary
+    // ❌ var diary: MoodDiary 제거!
     
     var body: some View {
         VStack {
             ScrollView {
                 VStack(spacing: 50) {
                     
-                    Text(formattedDate(dateString: diary.date))
+                    Text(formattedDate(dateString: vm.diary.date))
                         .font(.system(size: 30, weight: .bold))
                     
-                    Image(systemName: diary.mood.imageName)
+                    Image(systemName: vm.diary.mood.imageName)
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .shadow(color: .black, radius: 10, x: 0, y: 0)
                         .frame(height: 80)
                     
-                    Text(diary.text)
+                    Text(vm.diary.text)
                         .font(.system(size: 20, weight: .medium))
                         .foregroundColor(colorScheme == .dark ? .white : .black)
                 }
+                .frame(maxWidth: .infinity)
             }
             
             Spacer()
@@ -32,6 +34,7 @@ struct DiaryDetailsView: View {
             HStack {
                 Button {
                     print("delete Button Tapped")
+                    vm.delete()
                 } label: {
                     Image(systemName: "trash")
                         .renderingMode(.template)
@@ -39,7 +42,7 @@ struct DiaryDetailsView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 30)
                 }
-                .foregroundColor(colorScheme == .dark ? .white : .black) // 점(.) 추가
+                .foregroundColor(colorScheme == .dark ? .white : .black)
                 .padding()
                 
                 Spacer()
@@ -52,10 +55,10 @@ struct DiaryDetailsView: View {
 extension DiaryDetailsView {
     private func formattedDate(dateString: String) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss" // hh -> HH (24시간 형식)
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         guard let date = formatter.date(from: dateString) else {
-            return dateString // 파싱 실패시 원본 반환
+            return dateString
         }
 
         formatter.dateFormat = "EEE, MMM d, yyyy"
@@ -65,11 +68,7 @@ extension DiaryDetailsView {
 
 struct DiaryDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        // 안전한 프리뷰 데이터 사용
-        if let sampleDiary = MoodDiary.list.first {
-            DiaryDetailsView(diary: sampleDiary)
-        } else {
-            Text("No sample data available")
-        }
+        let vm = DiaryDetailsViewModel(diaries: .constant(MoodDiary.list), diary: MoodDiary.list.first!)
+        DiaryDetailsView(vm: vm)  // ✅ diary 매개변수 제거
     }
 }

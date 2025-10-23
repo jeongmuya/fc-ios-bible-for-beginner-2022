@@ -23,7 +23,7 @@ struct DiaryListView: View {
     var body: some View {
         NavigationView{
             VStack {
-                
+
                 ScrollView {
                     LazyVGrid(columns: layout) {
                         ForEach(vm.keys, id:\.self) { key in
@@ -34,12 +34,14 @@ struct DiaryListView: View {
                                 })
                                 ForEach(orderedItems) { item in
                                     NavigationLink {
-                                        DiaryDetailsView(diary: item)
+                                        let detailVM = DiaryDetailsViewModel(diaries: $vm.list, diary: item)
+                                        DiaryDetailsView(vm: detailVM)  // ✅ diary: item 제거
                                     } label: {
                                         MoodDiaryCell(diary: item)
-                                            .frame(height:50)
+                                            .frame(height: 50)
+                                    }
 
-                                    }                                }
+                                }
                                 
                             } header: {
                                 Text(formattedSectionTitle(key))
@@ -68,12 +70,10 @@ struct DiaryListView: View {
             .navigationTitle("Emotion Diary")
         }
         .sheet(isPresented: $isPresenting) {
-            
-            let vm = DiaryViewModel(isPresented:
-                    $isPresenting, diaryies: $vm.list
-            )
-            DiaryDateInputView(vm: vm)
+            let diaryVM = DiaryViewModel(isPresented: $isPresenting, diaries: $vm.list)
+            DiaryDateInputView(vm: diaryVM)
         }
+
         .onAppear {
             vm.fetch()
         }
